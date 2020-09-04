@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>mysite</title>
+	{% if session ['mode']=='dark' %}
+	<style >body{background-color:black;
+	color: white; }</style>
+	{% endif %}
+
+	{% if session ['mode']=='light' %}
+	<style >body{background-color:white;
+	color: black; }</style>
+	{% endif %}
+
+	{% if session ['mode']=='green' %}
+	<style >body{background-color:green;
+	color: white; }</style>
+	{% endif %}
+
+	{% if session ['mode']=='red' %}
+	<style >body{background-color:red;
+	color: white; }</style>
+	{% endif %}
+
+	{% if session ['mode']=='yellow' %}
+	<style >body{background-color:yellow;
+	color: black;
+	font-weight: 60 }</style>
+	{% endif %}
+</head>
+<body>
+<div style="text-align: center;">
+	<h1>Welcome to my mysite</h1>
+	<a href="{{url_for('set_background',mode='light')}}" ><button style="font-weight:700;width: 100pt;height: 100pt;border-radius: 15pt;font-size: 20pt;margin: 20pt" type='submit'>light mode</button></a>
+	<a href="{{url_for('set_background',mode='dark')}}" ><button style="font-weight:700;width: 100pt;height: 100pt;border-radius: 15pt;font-size: 20pt;margin: 20pt"type="submit">dark mode</button></a>
+	<a href="{{url_for('set_background',mode='yellow')}}" ><button style="font-weight:700;width: 100pt;height: 100pt;border-radius: 15pt;font-size: 20pt;margin: 20pt" type="submit">yellow mode</button></a>
+	<a href="{{url_for('set_background',mode='red')}}" ><button style="font-weight:700;width: 100pt;height: 100pt;border-radius: 15pt;font-size: 20pt;margin: 20pt" type="submit">red mode</button></a>
+	<a href="{{url_for('set_background',mode='green')}}" ><button style="font-weight:700;width: 100pt;height: 100pt;border-radius: 15pt;font-size: 20pt;margin: 20pt" type="submit">green mode</button></a>
+
+</div>
+
+</body>
+</html>
